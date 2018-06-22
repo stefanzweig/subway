@@ -7,3 +7,5 @@ before_script:
   - sleep 3
 script:
 - ls
+aftersuccess:
+- echo Good.\n
