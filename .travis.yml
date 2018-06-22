@@ -3,9 +3,19 @@ python:
   - 2.7
 sudo: required
 dist: jessie
+
 before_script:
   - sleep 3
+
 script:
 - ls
-aftersuccess:
+
+notifications:
+  email:
+    recipients:
+    - stefan.zweig@gmail.com
+    on_success: always
+    on_failure: always
+    
+after_success:
 - echo Good.\n
